@@ -1,62 +1,191 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RIZZ TOPUP PRO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RIZZSHOP - Top Up Game</title>
+
 <style>
-body{margin:0;font-family:Arial;background:#0a0f1f;color:white}
-header{background:#08142f;padding:15px;text-align:center;border-bottom:2px solid #0a84ff}
-.hero{text-align:center;padding:50px 20px}
-.box{max-width:900px;margin:auto;padding:20px}
-.card{background:#131c33;border-radius:12px;padding:15px;margin:10px 0}
-input,select,button{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:none}
-button{background:#0a84ff;color:white;font-weight:bold}
-.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0b1220;
+color:white;
+}
+
+header{
+background:linear-gradient(90deg,#0066ff,#001f4d);
+padding:20px;
+text-align:center;
+}
+
+header h1{
+font-size:35px;
+}
+
+.hero{
+padding:60px 20px;
+text-align:center;
+}
+
+.hero h2{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#ccc;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#0066ff;
+color:white;
+text-decoration:none;
+border-radius:10px;
+}
+
+.games{
+padding:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+}
+
+.card{
+background:#131c33;
+padding:20px;
+border-radius:15px;
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.form{
+padding:30px;
+max-width:700px;
+margin:auto;
+}
+
+.form h2{
+margin-bottom:15px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+}
+
+button{
+width:100%;
+padding:14px;
+background:#0066ff;
+border:none;
+color:white;
+font-size:16px;
+border-radius:10px;
+cursor:pointer;
+}
+
+.payment{
+padding:30px;
+text-align:center;
+}
+
+.pay{
+display:inline-block;
+background:#131c33;
+padding:12px 20px;
+margin:5px;
+border-radius:10px;
+}
+
+footer{
+text-align:center;
+padding:25px;
+color:#aaa;
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<h1>RIZZ TOPUP PRO</h1>
+<h1>RIZZSHOP</h1>
 <p>Top Up Cepat • Aman • Murah</p>
 </header>
 
-<div class="hero">
-<h2>Top Up Game Favoritmu</h2>
-</div>
+<section class="hero">
+<h2>Top Up Diamond & UC Termurah</h2>
+<p>Free Fire, Mobile Legends, PUBG, Honor Of Kings dan lainnya.</p>
+<a href="#topup" class="btn">TOP UP SEKARANG</a>
+</section>
 
-<div class="box">
-<div class="games">
+<section class="games">
 <div class="card">🔥 Free Fire</div>
 <div class="card">⚔️ Mobile Legends</div>
 <div class="card">🎯 PUBG Mobile</div>
-<div class="card">👑 Honor of Kings</div>
-</div>
+<div class="card">👑 Honor Of Kings</div>
+<div class="card">💎 Valorant</div>
+</section>
 
-<div class="card">
-<h3>Form Top Up</h3>
-<input placeholder="Masukkan UID Game">
+<section class="form" id="topup">
+<h2>Form Top Up</h2>
+
 <select>
+<option>Pilih Game</option>
+<option>Free Fire</option>
+<option>Mobile Legends</option>
+<option>PUBG Mobile</option>
+<option>Honor Of Kings</option>
+<option>Valorant</option>
+</select>
+
+<input type="text" placeholder="Masukkan UID">
+
+<select>
+<option>Pilih Nominal</option>
 <option>5 Diamond</option>
 <option>70 Diamond</option>
 <option>140 Diamond</option>
 <option>355 Diamond</option>
+<option>720 Diamond</option>
 </select>
-<select>
-<option>QRIS</option>
-<option>DANA</option>
-<option>OVO</option>
-<option>GoPay</option>
-</select>
-<button onclick="alert('Demo Website - Pesanan Berhasil Dibuat!')">Beli Sekarang</button>
-</div>
 
-<div class="card">
-<h3>Testimoni</h3>
-<p>⭐⭐⭐⭐⭐ Cepat dan terpercaya!</p>
-<p>⭐⭐⭐⭐⭐ Diamond masuk dalam hitungan menit.</p>
-</div>
-</div>
+<button onclick="pesan()">Beli Sekarang</button>
+
+</section>
+
+<section class="payment">
+<h2>Metode Pembayaran</h2>
+<div class="pay">QRIS</div>
+<div class="pay">DANA</div>
+<div class="pay">OVO</div>
+<div class="pay">GoPay</div>
+</section>
+
+<footer>
+© 2026 RIZZSHOP
+</footer>
+
+<script>
+function pesan(){
+alert("Pesanan berhasil dibuat!");
+}
+</script>
+
 </body>
 </html>
